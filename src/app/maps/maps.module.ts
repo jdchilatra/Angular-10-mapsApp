@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import * as mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
-(mapboxgl as any).accessToken = 'pk.eyJ1IjoiZGF2aWRjaGlsYXRyYSIsImEiOiJjbHEzMTFmd3owN3VhMml0YmF4dDFlMnpoIn0.FPAlvLmMwJ2TDH5Plh5g-Q';
+(mapboxgl as any).accessToken = environment.mapbox_key;
 
 import { MapsRoutingModule } from './maps-routing.module';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
@@ -12,6 +12,7 @@ import { MarkersPageComponent } from './pages/markers-page/markers-page.componen
 import { FullScreenPageComponent } from './pages/full-screen-page/full-screen-page.component';
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
+import { environment } from 'src/environments/environments';
 
 
 @NgModule({
